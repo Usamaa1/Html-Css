@@ -1,0 +1,45 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    height: 100vh;
+    background: linear-gradient(0deg, #3498db 50%, #fff 0%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.floatingText{
+    font-family: monospace;
+    font-size: 64px;
+    font-weight: 900;
+    text-transform: uppercase;
+    color: #ffffff40;
+    transform: translateY(0);
+    animation: fl1 3s infinite linear;
+}
+
+.floatingText::before{
+    content: attr(data-text);
+    position: absolute;
+    color: #000;
+    clip-path: polygon(0 0,100% 0,100% 50%,0 50%);
+    animation: fl2 3s infinite linear;
+}
+
+@keyframes fl1{
+    30%{
+        transform: translateY(10%) rotate(4deg);
+    }70%{
+        transform: translateY(10%) rotate(-4deg);
+    }
+}
+@keyframes fl2{
+    30%{
+        clip-path: polygon(0 0,100% 0,100% 24%,0 56%);
+    }70%{
+        clip-path: polygon(0 0,100% 0,100% 56%,0 24%);
+    }
+}
