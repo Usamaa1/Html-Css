@@ -1,0 +1,19 @@
+body{
+    margin: 0;
+    padding: 0;
+    font-family: "montserrat", sans-serif;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: url(txtDesign1.jpg) center no-repeat;
+    background-size: cover;
+}
+.text{
+    color: #fff;
+    font-size: 10em;
+    font-weight: 1000;
+    text-transform: uppercase;
+    mask-image: url(txtDesign1.png);
+    -webkit-mask-image: url(txtDesign1.png);
+}
