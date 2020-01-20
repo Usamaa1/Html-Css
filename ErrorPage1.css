@@ -1,0 +1,40 @@
+body{
+    margin: 0;
+    padding: 0;
+    font-family: "montserrat",  sans-serif;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    height: 100vh;
+    align-items: center;
+    background: linear-gradient(125deg,#00b894,#ff7675);
+}
+.container{
+    text-align: center;
+    color: #343434;
+}
+.error{
+    font-size: 160px;
+    letter-spacing: 20px;
+    font-weight: 1000;
+    margin-top: 0;
+    margin-bottom: 0;
+    background: url(ErrorPage1.jpg) center no-repeat;
+    background-size: 400px;
+    -webkit-text-fill-color: transparent;
+    -webkit-background-clip: text;
+}
+.container p{
+    margin-bottom: 50px;
+}
+.container span{
+    border-radius: 30px;
+    padding: 20px ;
+    color: #ffffff;
+    font-weight: 700;
+    background: #0984e3;
+    cursor: pointer;
+}
+ .container span:hover{
+opacity: 0.8;
+}
