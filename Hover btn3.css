@@ -1,0 +1,105 @@
+body{
+    margin: 0;
+    padding: 0;
+    display: flex;
+    align-items: center;
+    height: 100vh;
+    justify-content: center;
+    flex-direction: row;
+    background: #2f3640;
+    /* width: 100%; */
+    /* flex-wrap: wrap; */
+}
+/* .container{ */
+    /* width: 500px; */
+    /* height: 10px; */
+    
+/* }  */
+
+.btn{
+    /* width: 200px; */
+    /* height: 60px;  */
+    padding: 20px 40px;
+    /* border: 1px solid black; */
+    margin: 20px;
+    text-align: center;
+    font-family: 'Times New Roman', Times, serif;
+    text-transform: uppercase;
+    cursor: pointer;
+    border-radius: 6px;
+    color: #fff;
+    font-weight: 700;
+    transition: 0.6s;
+}
+
+.btn1{
+    background: linear-gradient(to left,#FFC312,#EE5A24,#FFC312);
+    background-size: 200%;
+}
+.btn2{
+    background: linear-gradient(to left,#C4E538,#009432,#C4E538);
+    background-size: 200%;
+    
+    
+    /* left: 0px; */
+    /* margin-right: 1000px; */
+    /* flex-direction: column; */
+    
+}
+.btn3{
+    background: linear-gradient(to left,#12CBC4,#0652DD,#12CBC4);
+    background-size: 200%;
+    /* position: relative; */
+    /* to */
+}
+.btn4{
+    background: linear-gradient(to left,#D980FA,#6c5ce7,#D980FA);
+    background-size: 200%;
+   
+}
+.btn:hover{
+    background-position: right;
+}
+.btn1, .btn2{
+    position: relative;
+    right: -240px;
+}
+.btn3, .btn4{
+    position: relative;
+    top: 80px;
+    left: -175px;
+}
+
+@media screen and (max-width: 830px) {
+    .btn1, .btn2{
+        position: relative;
+        right: -182px;
+    }
+    .btn3, .btn4{
+        position: relative;
+        top: 100px;
+        left: -190;
+    }
+  }
+  @media screen and (max-width: 345px) {
+    .btn1{
+            position: relative;
+            top: -200px
+    }
+    .btn2{
+        position: relative;
+        top: -100px;
+        left: 0px;
+    }
+.btn3{
+    position: relative;
+    top: 0px;
+    /* left: 0px; */
+}
+.btn4{
+    position: relative;
+    top: 100px;
+    left: -352px;
+    /* right: 00px; */
+}
+  }
