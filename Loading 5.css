@@ -1,0 +1,34 @@
+body{
+    margin: 0;
+    padding: 0;
+    /* background: linear-gradient(40deg,#0077B5,#0084ff); */
+    /* height: 100vh; */
+
+}
+.loading{
+    display: flex;
+    align-items: center;
+    background: linear-gradient(40deg,#0077B5,#9B59B6);
+    height: 100vh;
+}
+.loading::before{
+    content: '';
+    width: 180px;
+    height: 180px;
+    background: linear-gradient(40deg,#c23616,#e84118);
+    border-radius: 38%;
+    position: absolute;
+    left: 10%;
+    animation: loading 5s infinite linear;
+}
+@keyframes loading{
+    from{
+        transform: translateX(-50%) rotate(0);
+    }
+    50%{
+        left: 80%;
+    }
+    to{
+        transform: translateX(-50%) rotate(1444deg);
+    }
+}
