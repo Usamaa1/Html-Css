@@ -1,0 +1,56 @@
+body{
+    margin: 0;
+    padding: 0;
+    background: #2c3e50;
+}
+.container{
+   position: absolute;
+   top: 50%;
+   left: 50%;
+   transform: translate(-50%,-50%);
+   /* text-align: center; */
+   height: 60px;
+   /* width: 20%; */
+   background: #16a085;
+   /* line-height: 20px; */
+   padding: 0 40px;
+   overflow: hidden;
+}
+.txt{
+    color: #fff;
+    font-size: 40px;
+    text-transform: uppercase;
+    font-weight: 600;
+    font-family: monospace;
+    letter-spacing: 4px;
+    text-align: center;
+    line-height: 60px;
+    /* margin: 20px; */
+}
+.txt:first-child{
+    animation: animation 13s infinite linear;
+}
+
+@keyframes animation{
+    0%{
+        margin-top: 0;
+    }
+    16%{
+        margin-top: -60px;
+    }
+    33%{
+        margin-top: -120px;
+    }
+    50%{
+        margin-top: -180px;
+    }
+    66%{
+        margin-top: -120px;
+    }
+    82%{
+        margin-top: -60;
+    }
+    100%{
+        margin-top: 0;
+    }
+}
