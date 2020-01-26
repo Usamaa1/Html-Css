@@ -1,0 +1,111 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+.head{
+    background: linear-gradient(95deg,#d63031,#e84118,#e74c3c);
+    height: 80px;
+    width: 101%;
+    margin: -15px;
+}
+.logo{
+    position: absolute;
+    height: 65px;
+    margin: 10px;
+    margin-left: 20px;
+}
+body{
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: url(Web_page2.jpg) center no-repeat;
+    background-size: cover;
+    height: 100vh;
+    width: 100%;
+    margin-top: 15px;
+} 
+ul{
+    list-style: none;
+    display: flex;
+    justify-content: flex-end;
+    margin-right: 25px;
+    font-size: 24px;
+}
+li{
+    margin: 20px;
+}
+li a{
+    text-decoration: none;
+    color: #fff;
+    font-weight: 500;
+    padding: 20px;
+    border: 1px solid transparent;
+}  
+li a:hover{
+    border-bottom: 2px solid #fff;
+    opacity: 0.7;
+}
+.btn{
+    display: flex;
+    justify-content: center;
+    position: relative;
+    top: 500px;
+    /* align-items: center; */
+    /* height: 500px; */
+    /* margin: 20px; */
+    
+}
+button{
+    margin: 20px 10px;
+    padding: 10px 20px;
+    font-size: 18px;
+    color : #fff;
+    background: linear-gradient(25deg,#d63031,#e74c3c);
+    border: none;
+    cursor: pointer;
+}
+button:hover{
+    color : #d63031;
+    background: #fff;
+    opacity: 0.6;
+}
+
+.main{
+    color : #d63031;
+    position: relative;
+    top: 112vh;
+}
+h1{
+    text-align: center;
+    margin: 40px 0;
+    font-size: 44px;
+    text-decoration: underline;
+}
+iframe{
+    width: 1000px;
+    height: 600px;
+    margin-left: 250px;
+}
+.v_main{
+    display: flex;
+    /* flex-direction: row; */
+    margin-top: 20px;
+} 
+.video1{
+    /* margin-top: 20px; */
+    margin-left: 150px;
+
+}
+.video2{
+    margin-left: 30px;
+}
+footer{
+    display: flex;
+    position: relative;
+    justify-content: center;
+    top: 800px;
+    background-color: #333;
+    padding: 30px 0;
+    color: #fff;
+    text-align: center;
+    line-height: 25px;
+}
