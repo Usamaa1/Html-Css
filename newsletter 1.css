@@ -1,0 +1,76 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+body{
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #5758BB;
+}
+.newsletter{
+    width: 600px;
+    /* height: 400px; */
+    background: linear-gradient(120deg,#6c5ce7,#ff6b81);
+    box-shadow: 9px 9px 15px rgba(0, 0, 0, 0.55);
+    padding: 60px;
+}
+.newsletter h1{
+    text-transform: uppercase;
+    font-size: 48px;
+    text-align: center;
+    line-height: 50px;
+    color: #dcdde1;
+}
+.newsletter h1 span{
+    display: block;
+    font-size: 38px;
+}
+.newsletter p{
+    color: #f5f6fa;
+    font-size: 18px;
+    margin: 20px 0;
+}
+.txtb{
+    width: 100%;
+    height: 80px;
+    background: rgba(253, 167, 223, 0.527);
+    border-radius: 40px;
+    position: relative;
+}
+.txtb input{
+    width: 100%;
+    height: 80px;
+    border-radius: 40px;
+    outline: none;
+    background: transparent;
+    border: none;
+    padding-left: 20px;
+    color: #ecf0f1;
+    font-size: 18px;
+}
+.txtb button{
+    width: 70px;
+    height: 70px;
+    background-color: #5758BB;
+    color: #ecf0f1;
+    font-size: 18px;
+    outline: none;
+    border-radius: 50%;
+    border: none;
+    position: absolute;
+    right: 8px;
+    top: 5px; 
+    cursor: pointer;
+    transition: 0.3s linear ease-in-out;
+}
+::placeholder{
+    color: #40739e;
+}
+.txtb button:hover{
+    
+    opacity: 0.7;
+}
