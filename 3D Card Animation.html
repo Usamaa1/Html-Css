@@ -1,0 +1,419 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Page Title</title>
+
+  <style>
+    @import url(https://fonts.googleapis.com/css?family=Bree+Serif);
+
+    /* the important bits */
+    .mm {
+      -webkit-perspective: 400px;
+      perspective: 400px;
+    }
+    img{
+      height: 200px;
+      width: 300px;
+
+    }
+    .struction {
+      -webkit-transform: rotate3d(1, 0, 0, 90deg);
+      transform: rotate3d(1, 0, 0, 90deg);
+      width: 100%;
+      height: 100%;
+      padding: 20px;
+      position: absolute;
+      top: 0;
+      left: 0;
+      border-radius: 4px;
+      pointer-events: none;
+      background-color: rgba(26, 188, 156, 0.9);
+    }
+
+    .in-top .struction {
+      -webkit-transform-origin: 50% 0%;
+      transform-origin: 50% 0%;
+      -webkit-animation: in-top 300ms ease 0ms 1 forwards;
+      animation: in-top 300ms ease 0ms 1 forwards;
+    }
+
+    .in-right .struction {
+      -webkit-transform-origin: 100% 0%;
+      transform-origin: 100% 0%;
+      -webkit-animation: in-right 300ms ease 0ms 1 forwards;
+      animation: in-right 300ms ease 0ms 1 forwards;
+    }
+
+    .in-bottom .struction {
+      -webkit-transform-origin: 50% 100%;
+      transform-origin: 50% 100%;
+      -webkit-animation: in-bottom 300ms ease 0ms 1 forwards;
+      animation: in-bottom 300ms ease 0ms 1 forwards;
+    }
+
+    .in-left .struction {
+      -webkit-transform-origin: 0% 0%;
+      transform-origin: 0% 0%;
+      -webkit-animation: in-left 300ms ease 0ms 1 forwards;
+      animation: in-left 300ms ease 0ms 1 forwards;
+    }
+
+    .out-top .struction {
+      -webkit-transform-origin: 50% 0%;
+      transform-origin: 50% 0%;
+      -webkit-animation: out-top 300ms ease 0ms 1 forwards;
+      animation: out-top 300ms ease 0ms 1 forwards;
+    }
+
+    .out-right .struction {
+      -webkit-transform-origin: 100% 50%;
+      transform-origin: 100% 50%;
+      -webkit-animation: out-right 300ms ease 0ms 1 forwards;
+      animation: out-right 300ms ease 0ms 1 forwards;
+    }
+
+    .out-bottom .struction {
+      -webkit-transform-origin: 50% 100%;
+      transform-origin: 50% 100%;
+      -webkit-animation: out-bottom 300ms ease 0ms 1 forwards;
+      animation: out-bottom 300ms ease 0ms 1 forwards;
+    }
+
+    .out-left .struction {
+      -webkit-transform-origin: 0% 0%;
+      transform-origin: 0% 0%;
+      -webkit-animation: out-left 300ms ease 0ms 1 forwards;
+      animation: out-left 300ms ease 0ms 1 forwards;
+    }
+
+
+    @keyframes in-top {
+      from {
+        -webkit-transform: rotate3d(-1, 0, 0, 90deg);
+        transform: rotate3d(-1, 0, 0, 90deg);
+      }
+
+      to {
+        -webkit-transform: rotate3d(0, 0, 0, 0deg);
+        transform: rotate3d(0, 0, 0, 0deg);
+      }
+    }
+
+    @keyframes in-right {
+      from {
+        -webkit-transform: rotate3d(0, -1, 0, 90deg);
+        transform: rotate3d(0, -1, 0, 90deg);
+      }
+
+      to {
+        -webkit-transform: rotate3d(0, 0, 0, 0deg);
+        transform: rotate3d(0, 0, 0, 0deg);
+      }
+    }
+
+    @keyframes in-bottom {
+      from {
+        -webkit-transform: rotate3d(1, 0, 0, 90deg);
+        transform: rotate3d(1, 0, 0, 90deg);
+      }
+
+      to {
+        -webkit-transform: rotate3d(0, 0, 0, 0deg);
+        transform: rotate3d(0, 0, 0, 0deg);
+      }
+    }
+
+
+
+    @keyframes in-left {
+      from {
+        -webkit-transform: rotate3d(0, 1, 0, 90deg);
+        transform: rotate3d(0, 1, 0, 90deg);
+      }
+
+      to {
+        -webkit-transform: rotate3d(0, 0, 0, 0deg);
+        transform: rotate3d(0, 0, 0, 0deg);
+      }
+    }
+
+
+    @keyframes out-top {
+      from {
+        -webkit-transform: rotate3d(0, 0, 0, 0deg);
+        transform: rotate3d(0, 0, 0, 0deg);
+      }
+
+      to {
+        -webkit-transform: rotate3d(-1, 0, 0, 104deg);
+        transform: rotate3d(-1, 0, 0, 104deg);
+      }
+    }
+
+    @keyframes out-right {
+      from {
+        -webkit-transform: rotate3d(0, 0, 0, 0deg);
+        transform: rotate3d(0, 0, 0, 0deg);
+      }
+
+      to {
+        -webkit-transform: rotate3d(0, -1, 0, 104deg);
+        transform: rotate3d(0, -1, 0, 110.5deg);
+      }
+    }
+
+
+    @keyframes out-bottom {
+      from {
+        -webkit-transform: rotate3d(0, 0, 0, 0deg);
+        transform: rotate3d(0, 0, 0, 0deg);
+      }
+
+      to {
+        -webkit-transform: rotate3d(1, 0, 0, 104deg);
+        transform: rotate3d(1, 0, 0, 104deg);
+      }
+    }
+
+    
+
+    @keyframes out-left {
+      from {
+        -webkit-transform: rotate3d(0, 0, 0, 0deg);
+        transform: rotate3d(0, 0, 0, 0deg);
+      }
+
+      to {
+        -webkit-transform: rotate3d(0, 1, 0, 110.5deg);
+        transform: rotate3d(0, 1, 0, 110.5deg);
+      }
+    }
+
+    /* you can ignore this ones */
+    .m {
+      padding: 0;
+      margin: 0 0 50px;
+
+    }
+
+    .m:after {
+      content: "";
+      display: table;
+      clear: both;
+
+    }
+
+    .mm {
+      position: relative;
+      float: left;
+      width: 300px;
+      height: 200px;
+      margin: 5px;
+      padding: 0;
+      list-style: none;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .mm h3 {
+      margin: 0;
+      font-size: 22px;
+      color: rgba(255, 255, 255, 0.9);
+    }
+
+    .mm p {
+      font-size: 15px;
+      line-height: 1.5;
+      color: rgba(255, 255, 255, 0.8);
+    }
+
+    .mm .easy {
+      width: 100%;
+      height: 100%;
+      background-color: #ECF0F1;
+      color: rgba(52, 73, 94, 0.6);
+      box-shadow: inset 0 2px 20px #e6ebed;
+      text-align: center;
+      font-size: 50px;
+      line-height: 200px;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      background-color: #fff;
+    }
+
+    .o {
+      margin: 0 auto 5px;
+      text-align: center;
+    }
+
+    h3 {
+      font-family: 'Bree Serif', serif;
+    }
+    h3 .o{
+      font-size: 16px;
+    }
+
+    .box {
+      width: 100%;
+      height: 700px;
+      margin: 0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-wrap: wrap;
+    }
+
+
+    img {
+      border-radius: 4px;
+    }
+  </style>
+</head>
+
+<body>
+  <div class='box'>
+    <ul class="m">
+      <li class="mm">
+        <img src="casey-horner-9XRpNnTqdJE-unsplash.jpg" >
+
+        <div class='struction'>
+          <h3 class="o">Single-origin coffee whatever</h3>
+          <p>Williamsburg tofu polaroid, 90's Bushwick irony.</p>
+        </div>
+      </li>
+
+      <li class="mm">
+        <img src="casey-horner-9XRpNnTqdJE-unsplash.jpg">
+
+        <div class='struction'>
+          <h3 class="o">Single-origin coffee whatever</h3>
+          <p>Williamsburg tofu polaroid, 90's Bushwick irony.</p>
+        </div>
+      </li>
+      <li class="mm">
+        <img src="casey-horner-9XRpNnTqdJE-unsplash.jpg">
+
+        <div class='struction'>
+          <h3 class="o">Single-origin coffee whatever</h3>
+          <p>Williamsburg tofu polaroid, 90's Bushwick irony.</p>
+        </div>
+      </li>
+      <li class="mm">
+        <img src="casey-horner-9XRpNnTqdJE-unsplash.jpg">
+
+        <div class='struction'>
+          <h3 class="o">Single-origin coffee whatever</h3>
+          <p>Williamsburg tofu polaroid, 90's Bushwick irony.</p>
+        </div>
+      </li>
+      <li class="mm">
+        <img src="casey-horner-9XRpNnTqdJE-unsplash.jpg">
+
+        <div class='struction'>
+          <h3 class="o">Single-origin coffee whatever</h3>
+          <p>Williamsburg tofu polaroid, 90's Bushwick irony.</p>
+        </div>
+      </li>
+      <li class="mm">
+        <img src="casey-horner-9XRpNnTqdJE-unsplash.jpg">
+
+        <div class='struction'>
+          <h3 class="o">Single-origin coffee whatever</h3>
+          <p>Williamsburg tofu polaroid, 90's Bushwick irony.</p>
+        </div>
+      </li>
+      <li class="mm">
+        <img src="casey-horner-9XRpNnTqdJE-unsplash.jpg">
+
+        <div class='struction'>
+          <h3 class="o">Single-origin coffee whatever</h3>
+          <p>Williamsburg tofu polaroid, 90's Bushwick irony.</p>
+        </div>
+      </li>
+      <li class="mm">
+        <img src="casey-horner-9XRpNnTqdJE-unsplash.jpg">
+
+        <div class='struction'>
+          <h3 class="o">Single-origin coffee whatever</h3>
+          <p>Williamsburg tofu polaroid, 90's Bushwick irony.</p>
+        </div>
+      </li>
+      <li class="mm">
+        <img src="casey-horner-9XRpNnTqdJE-unsplash.jpg">
+
+        <div class='struction'>
+          <h3 class="o">Single-origin coffee whatever</h3>
+          <p>Williamsburg tofu polaroid, 90's Bushwick irony.</p>
+        </div>
+      </li>
+      <!-- <li class="mm">
+        <img src="casey-horner-9XRpNnTqdJE-unsplash.jpg">
+
+        <div class='struction'>
+          <h3 class="o">Single-origin coffee whatever</h3>
+          <p>Williamsburg tofu polaroid, 90's Bushwick irony.</p>
+        </div>
+      </li>
+      <li class="mm">
+        <img src="casey-horner-9XRpNnTqdJE-unsplash.jpg">
+
+        <div class='struction'>
+          <h3 class="o">Single-origin coffee whatever</h3>
+          <p>Williamsburg tofu polaroid, 90's Bushwick irony.</p>
+        </div>
+      </li> -->
+      <li class="mm">
+        <img src="casey-horner-9XRpNnTqdJE-unsplash.jpg">
+
+        <div class='struction'>
+          <h3 class="o">Single-origin coffee whatever</h3>
+          <p>Williamsburg tofu polaroid, 90's Bushwick irony.</p>
+        </div>
+      </li>
+    </ul>
+  </div>
+  <script>
+    // - Noel Delgado | @pixelia_me
+
+    const nodes = [].slice.call(document.querySelectorAll('li'), 0);
+    const directions = { 0: 'top', 1: 'right', 2: 'bottom', 3: 'left' };
+    const classNames = ['in', 'out'].map(p => Object.values(directions).map(d => `${p}-${d}`)).reduce((a, b) => a.concat(b));
+
+    const getDirectionKey = (ev, node) => {
+      const { width, height, top, left } = node.getBoundingClientRect();
+      const l = ev.pageX - (left + window.pageXOffset);
+      const t = ev.pageY - (top + window.pageYOffset);
+      const x = l - width / 2 * (width > height ? height / width : 1);
+      const y = t - height / 2 * (height > width ? width / height : 1);
+      return Math.round(Math.atan2(y, x) / 1.57079633 + 5) % 4;
+    };
+
+    class Item {
+      constructor(element) {
+        this.element = element;
+        this.element.addEventListener('mouseover', ev => this.update(ev, 'in'));
+        this.element.addEventListener('mouseout', ev => this.update(ev, 'out'));
+      }
+
+      update(ev, prefix) {
+        this.element.classList.remove(...classNames);
+        this.element.classList.add(`${prefix}-${directions[getDirectionKey(ev, this.element)]}`);
+      }
+    }
+
+
+    nodes.forEach(node => new Item(node));
+  </script>
+
+
+</body>
+
+</html>
