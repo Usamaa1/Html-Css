@@ -1,0 +1,140 @@
+
+    .photobox {
+        display: inline-block;
+    }
+
+    .photobox__previewbox {
+        position: relative;
+        overflow: hidden;
+        margin: 1px;
+    }
+
+    .photobox__preview {
+        display: block;
+        max-width: 100%;
+    }
+
+    .photobox__previewbox:before {
+        content: "";
+    }
+
+    /* type 1 */
+
+    .photobox_type1 .photobox__previewbox:before {
+        width: 0;
+        height: 0;
+        padding: 25%;
+        border-radius: 50%;
+        position: absolute;
+        top: 0;
+        left: 0;
+        
+        background-color: rgba(254, 205, 1, 0.6);
+        transition: transform calc(var(--photoboxAnimationDuration, .2s) / 2) ease calc(var(--photoboxAnimationDuration, .2s) / 2);
+        will-change: transform;
+        transform: scale(0);
+    }
+
+    .photobox_type1:hover .photobox__previewbox:before {
+        transform: scale(2);
+        transition-duration: var(--photoboxAnimationDuration, .2s);
+        transition-delay: 0s;
+    }
+
+    .photobox_type1 .photobox__label {
+        width: 50%;
+        transform: translate(-200%, -50%);
+        transition: transform var(--photoboxAnimationDuration, .2s) ease-out;
+        will-change: transform;
+
+        position: absolute;
+        top: 50%;
+        left: 15%;
+    }
+
+    .photobox_type1:hover .photobox__label {
+        transition-duration: var(--photoboxAnimationDuration, .2s);
+        transform: translate(0, -50%);
+    }
+
+
+
+    /*  */
+
+    /*
+  * demo styles for photobox
+  */
+
+    .photobox {
+        color: #000000;
+        font-size: 2.5rem;
+        font-weight: 700;
+        width: 33.33333%;
+        /* --photoboxOverlay: rgba(254, 205, 1, 0.6); */
+        /*--photoboxAnimationDuration: .5s;*/
+    }
+
+    @media screen and (max-width: 480px) {
+        .photobox {
+            width: 100%;
+        }
+    }
+
+    /*
+  * demo page
+  */
+
+    @media screen and (min-width: 768px) {
+
+        html {
+            font-size: 62.5%;
+        }
+    }
+
+    @media screen and (max-width: 767px) {
+
+        html {
+            font-size: 50%;
+        }
+    }
+
+    body {
+        font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Open Sans, Ubuntu, Fira Sans, Helvetica Neue, sans-serif;
+        font-size: 1.6rem;
+        color: #fff;
+        margin: 0;
+        overflow-y: scroll;
+        -webkit-overflow-scrolling: touch;
+    }
+
+    a {
+        text-decoration: none;
+        color: inherit;
+    }
+
+    a:hover,
+    a:focus {
+        text-decoration: underline;
+    }
+
+    .page {
+        min-height: 100vh;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+    }
+
+    .page__demo {
+        flex-grow: 1;
+    }
+
+    .page__container {
+        display: flex;
+        flex-wrap: wrap;
+        align-items: flex-start;
+    }
+
+    .main-container {
+        padding-left: 1rem;
+        padding-right: 1rem;
+    }
