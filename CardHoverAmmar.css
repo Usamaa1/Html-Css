@@ -277,7 +277,7 @@ button {
     opacity: 0;
     pointer-events: none;
     transition: opacity .75s $ease-out-circ,
-                transform 0.6s $ease-out-circ;
+             transform 0.6s $ease-out-circ;
   }
   
   h3 { margin-top: 0; }
